@@ -12,19 +12,22 @@ int main(){
 
     vector<int> vetor(N);
 
+    // otimiza depois
+
+    // preenche vetor
     for(int i=0; i<N; i++){
-        int x;
-        cin >> x;
+        cin >> vetor[i];
     }
 
     for(int i=0; i<N; i++){
-        if(x%2==0) cout << par[i] << " ";
+        if(vetor[i]%2==0)
+            cout << vetor[i] << " ";
     }
     cout << "\n";
 
     for(int i=0; i<N; i++){
-        cout << impar[i] << " ";
+        if(vetor[i]%2!=0)
+            cout << vetor[i] << " ";
     }
-
     return 0;
 }
