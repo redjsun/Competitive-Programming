@@ -7,17 +7,27 @@ int main(){
 
     vector<int> cadeira(3);
 
-    int A;
+    int A, B;
+    cin >> A >> B;
+
+    int pos = (A%3)+1;
+
+    if(pos > 2) 
+        pos = 0;
+    cadeira[pos]++;
+
+    pos = (B%3)+1;
 
     while(1){
-        cin >> A;
-        int pos = (A%3)+1;
+        if(pos > 2) 
+            pos = 0;
 
-        if(pos > 2) pos = 0;
-        if(cadeira[pos] == 1) pos++;
-        else
+        if(cadeira[pos] == 1) 
+            pos++;
+        else{
             cadeira[pos]++;
-
+            break;
+        }
     }
     
 
